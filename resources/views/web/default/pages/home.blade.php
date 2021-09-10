@@ -13,7 +13,7 @@
 @endpush
 
 @section('content')
-@include(getTemplate().'.includes.navbar')
+@include(getTemplate().'.includes.header')
 <section class="banner">
     <div class="container">
         <div class="row">
