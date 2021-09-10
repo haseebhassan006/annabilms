@@ -1,5 +1,7 @@
 <?php
 
+
+
 function getTemplate()
 {
     /*$template = cache()->remember('view.template', 7 * 24 * 60 * 60, function () {
@@ -82,7 +84,7 @@ function getTimeByDay($title)
     }
     return $time;
 }
-  
+
 
 function convertDayToNumber($times)
 {
