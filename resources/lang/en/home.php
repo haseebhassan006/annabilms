@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Home 
+    | Home
     |--------------------------------------------------------------------------
     */
 
@@ -17,7 +17,6 @@ return [
     'find' => 'Search',
 
     'view_all' => 'View All',
-    // stats
     'teachers' => 'Instructors',
     'skillful_teachers' => 'Skillful Instructors',
     'skillful_teachers_hint' => 'Start learning from experienced instructors.',
