@@ -2,11 +2,7 @@
 
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Quiz & Certificates
-    |--------------------------------------------------------------------------
-    */
+
 
     'quiz' => 'Quiz',
     'quizzes' => 'Quizzes',
@@ -28,24 +24,20 @@ return [
     'open_results' => 'Open results',
     'open_quizzes' => 'Open quizzes',
     'all_quizzes' => 'All quizzes',
-
     'multiple_choice' => 'Multiple choice',
     'add_multiple_choice' => 'Add a Multiple choice',
     'descriptive' => 'Descriptive',
     'add_descriptive' => 'Add Descriptive',
     'empty_means_infinity' => 'Leave it blank for unlimited',
-
     'multiple_choice_question' => 'Multiple choice question',
     'question_title' => 'Question title',
     'question_grade' => 'Question grade',
-
     'add_an_answer' => 'Add an answer',
     'answer_title' => 'Answer title',
     'answer_image' => 'Answer image (Optional)',
     'correct_answer' => 'Correct answer',
     'current_answer_required' => 'Please select a correct answer',
     'correct' => 'Correct',
-
     'new_descriptive_question' => 'New descriptive question',
     'student' => 'Student',
     'students' => 'Students',
