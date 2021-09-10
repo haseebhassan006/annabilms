@@ -61,6 +61,10 @@ class DocumentController extends Controller
         return view('admin.financial.documents.lists', $data);
     }
 
+    public function backUp(){
+        return "backUp";
+    }
+
 
     public function create()
     {
