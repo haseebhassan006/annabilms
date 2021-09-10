@@ -5,15 +5,13 @@
 <link href="https://netteria.net/myscript/jquery/html5videopopup/css/videopopup.css" rel="stylesheet" >
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href=" {{ asset('/frontend/assets/css/style.css') }} " rel="stylesheet" >
-<link href=" {{ asset('/frontend/assets/slick-slider/slick/slick-theme.css') }} " rel="stylesheet">
-<link href=" {{asset('/frontend/assets/slick-slider/slick/slick.css')}} " rel="stylesheet">
+
     <link rel="stylesheet" href="/assets/default/vendors/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="/assets/default/vendors/owl-carousel2/owl.carousel.min.css">
 @endpush
 
 @section('content')
-@include(getTemplate().'.includes.header')
+
 <section class="banner">
     <div class="container">
         <div class="row">

@@ -151,9 +151,9 @@
                         </li>
                     @endif
 
-                    <li class="mt-5 {{ (request()->is('panel/webinars/my-comments')) ? 'active' : '' }}">
+                    {{-- <li class="mt-5 {{ (request()->is('panel/webinars/my-comments')) ? 'active' : '' }}">
                         <a href="/panel/webinars/my-comments">{{ trans('panel.my_comments') }}</a>
-                    </li>
+                    </li> --}}
                     <li class="mt-5 {{ (request()->is('panel/webinars/favorites')) ? 'active' : '' }}">
                         <a href="/panel/webinars/favorites">{{ trans('panel.favorites') }}</a>
                     </li>

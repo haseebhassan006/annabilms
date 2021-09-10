@@ -41,12 +41,15 @@
                   </button>
                   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav ">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">My Courses</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">All Courses</a>
-                      </li>
+                        @if(!empty($navbarPages) and count($navbarPages))
+                        @foreach($navbarPages as $navbarPage)
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ $navbarPage['link'] }}">{{ $navbarPage['title'] }}</a>
+                              </li>
+                        @endforeach
+                    @endif
+
                       @if(empty($authUser))
                       <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>

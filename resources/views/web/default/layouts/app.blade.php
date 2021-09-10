@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="{{ asset('/assets/default/vendors/toast/jquery.toast.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/default/vendors/simplebar/simplebar.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/default/css/app.css') }}">
+    <link href=" {{ asset('/frontend/assets/css/style.css') }} " rel="stylesheet" >
+   <link href=" {{ asset('/frontend/assets/slick-slider/slick/slick-theme.css') }} " rel="stylesheet">
+   <link href=" {{asset('/frontend/assets/slick-slider/slick/slick.css')}} " rel="stylesheet">
 
     @if($isRtl)
         <link rel="stylesheet" href="{{ asset('/assets/default/css/rtl-app.css') }}">
@@ -39,7 +42,8 @@
 <div id="app">
 
     @include(getTemplate().'.includes.top_nav')
-  
+    @include(getTemplate().'.includes.header')
+   
 
     @yield('content')
 
