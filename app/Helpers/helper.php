@@ -82,6 +82,7 @@ function getTimeByDay($title)
     }
     return $time;
 }
+  
 
 function convertDayToNumber($times)
 {
