@@ -12,7 +12,7 @@ return [
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
     'admin_panel' => 'Admin Panel',
     'welcome' => 'Welcome to',
-    'admin_tagline' => 'Please login to control and manage everything!',  
+    'admin_tagline' => 'Please login to control and manage everything!',
     'email' => 'Email',
     'mobile' => 'Phone',
     'country' => 'Country',
