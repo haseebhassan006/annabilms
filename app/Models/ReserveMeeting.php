@@ -27,6 +27,10 @@ class ReserveMeeting extends Model
         return $this->belongsTo('App\Models\Meeting', 'meeting_id', 'id');
     }
 
+    public function bsdk(){
+        return "bsdk";
+    }
+
     public function sale()
     {
         return $this->belongsTo('App\Models\Sale', 'sale_id', 'id');
