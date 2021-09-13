@@ -295,6 +295,7 @@ class UserController extends Controller
 
     private function filterInstructors($request, $query, $role)
     {
+    
         $categories = $request->get('categories', null);
         $sort = $request->get('sort', null);
         $availableForMeetings = $request->get('available_for_meetings', null);

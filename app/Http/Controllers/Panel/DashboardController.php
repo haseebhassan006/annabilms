@@ -16,7 +16,10 @@ class DashboardController extends Controller
 {
     public function dashboard()
     {
+
+
         $user = auth()->user();
+       
 
         $nextBadge = $user->getBadges(true, true);
 
@@ -53,6 +56,7 @@ class DashboardController extends Controller
             $data['commentsCount'] = count($comments);
             $data['monthlySalesCount'] = count($monthlySales) ? $monthlySales->sum('amount') : 0;
             $data['monthlyChart'] = $this->getMonthlySalesOrPurchase($user);
+
         } else {
             $webinarsIds = $user->getPurchasedCoursesIds();
 

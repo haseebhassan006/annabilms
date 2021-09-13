@@ -66,6 +66,7 @@
                         <img src="/assets/default/img/activity/36.svg" class="account-balance-icon" alt="">
 
                         <h3 class="font-16 font-weight-500 text-gray mt-25">{{ trans('panel.account_balance') }}</h3>
+                      
                         <span class="mt-5 d-block font-30 text-secondary">{{ $currency }}{{ $authUser->getAccountingBalance() }}</span>
                     </div>
 
