@@ -7,7 +7,15 @@
 
 
  @section('content')
-    <section class="site-top-banner search-top-banner opacity-04 position-relative">
+ <section class="banner">
+    <div class="container">
+        <div class="row">
+            <h1 class="text-white font-30 mb-15">{{ $pageTitle }}</h1>
+            <span class="course-count-badge py-5 px-10 text-white rounded">{{ $instructorsCount }}{{ trans('product.courses') }}</span>
+        </div>
+    </div>
+</section>
+    {{-- <section class="site-top-banner search-top-banner opacity-04 position-relative">
         <img src="{{ getPageBackgroundSettings($page) }}" class="img-cover" alt=""/>
 
         <div class="container h-100">
@@ -29,7 +37,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
    <div class="container">
 

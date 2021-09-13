@@ -1,6 +1,17 @@
 @extends(getTemplate().'.layouts.app')
 
 @section('content')
+
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <h1 class="text-white font-30 mb-15">{{ $pageTitle }}</h1>
+            <span class="course-count-badge py-5 px-10 text-white rounded"> </span>
+        </div>
+    </div>
+</section>
+
+{{--
     <section class="site-top-banner search-top-banner opacity-04 position-relative">
         <img src="{{ getPageBackgroundSettings('blog') }}" class="img-cover" alt=""/>
 
@@ -23,7 +34,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="container mt-10 mt-md-40">
         <div class="row">
