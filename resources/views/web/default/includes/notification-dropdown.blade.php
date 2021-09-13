@@ -1,6 +1,11 @@
 <div class="dropdown">
     <button type="button" class="btn btn-transparent dropdown-toggle" {{ (empty($unReadNotifications) or count($unReadNotifications) < 1) ? 'disabled' : '' }} id="navbarNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i data-feather="bell" width="20" height="20" class="mr-10"></i>
+       @if(request()->url('/')==url('/'))
+       <i class="fas fa-bell" width="20" height="20" class="mr-10"></i>
+       @else
+       <i data-feather="bell" width="20" height="20" class="mr-10"></i>
+       @endif
+
 
         @if(!empty($unReadNotifications) and count($unReadNotifications))
             <span class="badge badge-circle-danger d-flex align-items-center justify-content-center">{{ count($unReadNotifications) }}</span>
@@ -27,7 +32,7 @@
 
                 @else
                     <div class="d-flex align-items-center text-center py-50">
-                        <i data-feather="bell" width="20" height="20" class="mr-10"></i>
+                        <i class="fas fa-bell" width="20" height="20" class="mr-10"></i>
                         <span class="">{{ trans('notification.empty_notifications') }}</span>
                     </div>
                 @endif

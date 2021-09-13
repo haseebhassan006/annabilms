@@ -33,14 +33,14 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <nav class="navbar navbar-expand-lg navbar-light">
+              <nav class="navbar navbar-expand-lg navbar-light" style="background-color:black;">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="/"><img src="{{ asset('/frontend/assets/images/Name-Logo.png') }}" class="img-fluid" alt=""></a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav ">
+                    <ul class="navbar-nav " >
                         @if(!empty($navbarPages) and count($navbarPages))
                         @foreach($navbarPages as $navbarPage)
 
@@ -63,7 +63,7 @@
                       </li>
                       @endif
                       <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                        <a class="nav-link" href="/login"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>

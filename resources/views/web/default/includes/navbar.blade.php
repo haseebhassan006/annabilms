@@ -11,7 +11,7 @@
 
             <a class="navbar-brand navbar-order mr-0" href="/">
 
-                <img src="{{ asset('store/1/default_images/mojavi.png') }}" class="img-cover" alt="site logo" style="width: 53px;">
+                <img src="{{ asset('img/logo.png') }}" class="img-cover" alt="site logo" style="width: 53px;">
 
             </a>
 

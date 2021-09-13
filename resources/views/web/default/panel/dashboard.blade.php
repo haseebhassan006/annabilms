@@ -49,7 +49,11 @@
             <a href="/panel/notifications" class="mt-15 font-weight-500 text-dark-blue d-inline-block">{{ trans('panel.view_all_events') }}</a>
 
             <div class="dashboard-banner">
+                @if (file_exists(getPageBackgroundSettings('dashboard')))
                 <img src="{{ getPageBackgroundSettings('dashboard') }}" alt="" class="img-cover">
+                @else
+                <img src="{{ asset('/img/dashboard/dashboard.png') }}" alt="" class="img-cover">
+                @endif
             </div>
         </div>
     </section>
@@ -216,7 +220,7 @@
     <script src="/assets/default/vendors/chartjs/chart.min.js"></script>
 
     <script>
-        ;(function (){ 
+        ;(function (){
         'use strict'
         var offlineSuccess = '{{ trans('panel.offline_success') }}';
         var $chartDataMonths = @json($monthlyChart['months']);

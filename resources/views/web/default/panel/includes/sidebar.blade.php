@@ -2,7 +2,13 @@
     {{ $authUser }}
     <div class="user-info d-flex align-items-center justify-content-between">
         <div class="user-avatar">
-                      <img src="{{ $authUser->getAvatar() }}" class="img-cover" alt="{{ $authUser->full_name }}">
+
+            @if (file_exists($authUser->getAvatar()))
+                                                <img  class="img-cover"  src="{{ $authUser->getAvatar() }}" alt="{{ $authUser->full_name }}">
+                @else
+                                                <img   class="img-cover"  src="{{ asset('img/users/default-user.jpg') }}">
+                                @endif
+                      {{-- <img src="{{ $authUser->getAvatar() }}" class="img-cover" alt="{{ $authUser->full_name }}"> --}}
         </div>
 
         <div class="user-name ml-15">
@@ -23,7 +29,12 @@
 
     <div class="user-info d-flex align-items-center flex-row flex-lg-column justify-content-lg-center">
         <a href="/panel" class="user-avatar">
-            <img src="{{ $authUser->getAvatar() }}" class="img-cover" alt="{{ $authUser->full_name }}">
+
+            @if (file_exists($authUser->getAvatar()))
+            <img  class="img-cover" src="{{ $authUser->getAvatar() }}" alt="{{ $authUser->full_name }}">
+                @else
+                            <img  class="img-cover"  src="{{ asset('img/users/default-user.jpg') }}">
+                @endif
         </a>
 
         <div class="d-flex flex-column align-items-center justify-content-center">

@@ -34354,10 +34354,10 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\laragon\www\an-nabi\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\laragon\www\an-nabi\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! D:\laragon\www\an-nabi\resources\sass\panel.scss */"./resources/sass/panel.scss");
-module.exports = __webpack_require__(/*! D:\laragon\www\an-nabi\resources\sass\rtl-app.scss */"./resources/sass/rtl-app.scss");
+__webpack_require__(/*! C:\laragon\www\annabilms\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\laragon\www\annabilms\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laragon\www\annabilms\resources\sass\panel.scss */"./resources/sass/panel.scss");
+module.exports = __webpack_require__(/*! C:\laragon\www\annabilms\resources\sass\rtl-app.scss */"./resources/sass/rtl-app.scss");
 
 
 /***/ })
