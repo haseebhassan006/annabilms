@@ -14,7 +14,8 @@ use App\Models\TicketUser;
 use App\PaymentChannels\ChannelManager;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-
+use Stripe\Charge;
+use Stripe\Stripe;
 class PaymentController extends Controller
 {
     public function paymentRequest(Request $request)
@@ -25,6 +26,7 @@ class PaymentController extends Controller
 
         $user = auth()->user();
         $gateway = $request->input('gateway');
+
         $orderId = $request->input('order_id');
 
         $order = Order::where('id', $orderId)
@@ -82,27 +84,45 @@ class PaymentController extends Controller
         }
 
         $order->payment_method = Order::$paymentChannel;
-        $order->save();
+
+       $order->save();
+
 
 
         try {
-            $channelManager = ChannelManager::makeChannel($paymentChannel);
-            $redirect_url = $channelManager->paymentRequest($order);
 
-            if (in_array($paymentChannel->class_name, ['Paytm', 'Payu', 'Zarinpal', 'Stripe', 'Paysera', 'MercadoPago', 'Cashu', 'Iyzipay'])) {
-                return $redirect_url;
+            Stripe::setApiKey(env('STRIPE_SECRET'));
+
+
+            $charge = Charge::create ([
+
+                     "amount" => $order->total_amount * 100,
+                     "currency" => "usd",
+                     "source" => $request->stripeToken,
+                     "description" => "Test payment from mojavilms."
+             ]);
+             $this->setPaymentAccounting($order);
+
+             $toastData = [
+                'title' => "Payment Successful",
+                'msg' => "Payment Successful",
+                'status' => 'success'
+            ];
+                return redirect('cart')->with(['toast' => $toastData]);
+
+            } catch (\Exception $exception) {
+                $toastData = [
+                    'title' => "Payment Successful",
+                    'msg' => "Payment Successful",
+                    'status' => 'success'
+                ];
+
+                return redirect('cart')->with(['toast' => $toastData]);
             }
 
-            return Redirect::away($redirect_url);
 
-        } catch (\Exception $exception) {
-            $toastData = [
-                'title' => trans('cart.fail_purchase'),
-                'msg' => trans('cart.gateway_error'),
-                'status' => 'error'
-            ];
-            return redirect('cart')->with(['toast' => $toastData]);
-        }
+
+
     }
 
     public function paymentVerify(Request $request, $gateway)

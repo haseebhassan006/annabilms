@@ -12,15 +12,17 @@
 
     <section class="container mt-45">
         <h2 class="section-title">{{ trans('financial.select_a_payment_gateway') }}</h2>
-
-        <form action="/payments/payment-request" method="post" class=" mt-25">
+        <form action="/payments/payment-request" method="post" class=" mt-25"  id="require-validation" data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}">
             {{ csrf_field() }}
             <input type="hidden" name="order_id" value="{{ $order->id }}">
+
+            <input id="key" type="hidden" name="stripe_key" value="{{ env('STRIPE_KEY') }}">
+
 
             <div class="row">
                 @if(!empty($paymentChannels))
                     @foreach($paymentChannels as $paymentChannel)
-                        <div class="col-6 col-lg-4 mb-40 charge-account-radio">
+                        <div class="col-6 col-lg-4 mb-40 charge-account-radio" id="gatwayCard">
                             <input type="radio" name="gateway" id="{{ $paymentChannel->title }}" data-class="{{ $paymentChannel->class_name }}" value="{{ $paymentChannel->id }}">
                             <label for="{{ $paymentChannel->title }}" class="rounded-sm p-20 p-lg-45 d-flex flex-column align-items-center justify-content-center">
                                 <img src="{{ $paymentChannel->image }}" width="120" height="60" alt="">
@@ -34,8 +36,8 @@
                     @endforeach
                 @endif
 
-                <div class="col-6 col-lg-4 mb-40 charge-account-radio">
-                    <input type="radio" @if(empty($userCharge) or ($total > $userCharge)) disabled @endif name="gateway" id="offline" value="credit">
+                {{-- <div class="col-6 col-lg-4 mb-40 charge-account-radio" id="offlinePayment" >
+                    <input type="radio" @if(empty($userCharge) or ($total > $userCharge)) disabled @endif name="gateway" id="offline" value="credit" data-class="credit">
                     <label for="offline" class="rounded-sm p-20 p-lg-45 d-flex flex-column align-items-center justify-content-center">
                         <img src="/assets/default/img/activity/pay.svg" width="120" height="60" alt="">
 
@@ -46,13 +48,61 @@
 
                         <span class="mt-5">{{ $currency }}{{ $userCharge }}</span>
                     </label>
+                </div> --}}
+            </div>
+            <div class="row " id="cardarea" style="display: none">
+                <div class="panel-body col-xl-12">
+
+
+
+
+                   <div class='form-row row'>
+                            <div class='col-xl-12 form-group required'>
+                                <label class='control-label'>Name on Card</label> <input
+                                    class='form-control' size='4' type='text'>
+                            </div>
+                        </div>
+
+                        <div class='form-row row'>
+                            <div class='col-xl-12 form-group card required' id="example2-card-number">
+                                <label class='control-label'>Card Number</label>
+                                <input
+                                    autocomplete='off' class='form-control card-number' size='20'
+                                    type='text'>
+                            </div>
+                        </div>
+
+                        <div class='form-row row'>
+                            <div class='col-xl-12 col-md-4 form-group cvc required'>
+                                <label class='control-label'>CVC</label>
+                                <input autocomplete='off'
+                                    class='form-control card-cvc' placeholder='ex. 311' size='4'
+                                    type='text'>
+                            </div>
+                            <div class='col-xl-12 col-md-4 form-group expiration required' >
+                                <label class='control-label'>Expiration Month</label>
+                                <input
+                                    class='form-control card-expiry-month' placeholder='MM' size='2'
+                                    type='text'>
+                            </div>
+                            <div class='col-xl-12 col-md-4 form-group expiration required'>
+                                <label class='control-label'>Expiration Year</label>
+                                <input
+                                    class='form-control card-expiry-year' placeholder='YYYY' size='4'
+                                    type='text'>
+                            </div>
+                        </div>
+
+
+
+
                 </div>
             </div>
 
 
             <div class="d-flex align-items-center justify-content-between mt-45">
                 <span class="font-16 font-weight-500 text-gray">{{ trans('financial.total_amount') }} {{ $currency }}{{ $total }}</span>
-                <button type="button" id="paymentSubmit" disabled class="btn btn-sm btn-primary">{{ trans('public.start_payment') }}</button>
+                <button data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" type="button" id="paymentSubmit" disabled class="btn btn-sm btn-primary">{{ trans('public.start_payment') }}</button>
             </div>
         </form>
 
@@ -78,5 +128,6 @@
 @endsection
 
 @push('scripts_bottom')
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script src="/assets/default/js/parts/payment.min.js"></script>
 @endpush
