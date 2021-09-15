@@ -37,6 +37,7 @@ class OfflinePaymentController extends Controller
             'roles' => $roles,
         ];
 
+
         $user_ids = $request->get('user_ids', []);
 
         if (!empty($user_ids)) {
