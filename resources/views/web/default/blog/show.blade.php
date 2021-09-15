@@ -100,8 +100,7 @@
 
 @push('scripts_bottom')
     <script>
-        ;(function (){ 
-        'use strict'
+
         var webinarDemoLang = '{{ trans('webinars.webinar_demo') }}';
         var replyLang = '{{ trans('panel.reply') }}';
         var closeLang = '{{ trans('public.close') }}';
@@ -109,7 +108,7 @@
         var reportLang = '{{ trans('panel.report') }}';
         var reportSuccessLang = '{{ trans('panel.report_success') }}';
         var messageToReviewerLang = '{{ trans('public.message_to_reviewer') }}';
-        }())
+
     </script>
 
     <script src="/assets/default/js/parts/comment.min.js"></script>

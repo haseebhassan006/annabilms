@@ -205,14 +205,14 @@
 
 @push('scripts_bottom')
     <script>
-        ;(function (){ 
-        'use strict'
+
+
         var unFollowLang = '{{ trans('panel.unfollow') }}';
         var followLang = '{{ trans('panel.follow') }}';
         var reservedLang = '{{ trans('meeting.reserved') }}';
         var availableDays = {{ json_encode($times) }};
         var messageSuccessSentLang = '{{ trans('site.message_success_sent') }}';
-        }())
+
     </script>
 
     <script src="/assets/default/vendors/persian-datepicker/persian-date.js"></script>

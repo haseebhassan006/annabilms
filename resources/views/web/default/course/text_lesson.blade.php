@@ -126,11 +126,10 @@
 
 @push('scripts_bottom')
     <script>
-        ;(function (){ 
-        'use strict'
+
         var learningToggleLangSuccess = '{{ trans('public.course_learning_change_status_success') }}';
         var learningToggleLangError = '{{ trans('public.course_learning_change_status_error') }}';
-        }())
+      
     </script>
 
     <script src="/assets/default/js/parts/text_lesson.min.js"></script>

@@ -472,8 +472,8 @@
     <script src="/assets/default/vendors/video/vimeo.js"></script>
 
     <script>
-        ;(function (){ 
-        'use strict'
+
+        
         var webinarDemoLang = '{{ trans('webinars.webinar_demo') }}';
         var replyLang = '{{ trans('panel.reply') }}';
         var closeLang = '{{ trans('public.close') }}';
@@ -496,7 +496,7 @@
         var canNotDownloadCertificateToastMsgLang = '{{ trans('public.can_not_download_certificate_toast_msg_lang') }}';
         var sessionFinishedToastTitleLang = '{{ trans('public.session_finished_toast_title_lang') }}';
         var sessionFinishedToastMsgLang = '{{ trans('public.session_finished_toast_msg_lang') }}';
-        }())
+
     </script>
 
     <script src="/assets/default/js/parts/comment.min.js"></script>
