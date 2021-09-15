@@ -835,7 +835,7 @@
                 <li class="menu-header">{{ trans('admin/main.settings') }}</li>
             @endif
 
-            {{-- @can('admin_settings')
+             @can('admin_settings')
                 @php
                     $settingClass ='';
 
@@ -857,7 +857,7 @@
                         <span>{{ trans('admin/main.settings') }}</span>
                     </a>
                 </li>
-            @endcan() --}}
+            @endcan()
 
 
             <li>
