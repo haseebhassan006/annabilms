@@ -19,13 +19,78 @@
                         <div class="card-body">
 
 
+                            <form action="/admin/financial/subscribes/store" method="Post">
+                                {{ csrf_field() }}
 
-                            <div class="empty-state mx-auto d-block"  data-width="900" >
-                                <img class="img-fluid col-md-6" src="/assets/default/img/plugin.svg" alt="image">
-                                <h3 class="mt-3">This is a paid plugin!</h3>
-                                <h5 class="lead">
-                                You can get this plugin by <strong><a href="">contacting support</a></strong> our checking <strong><a href="">CRM</a></strong>  </h5>                              </p>
-                              </div>
+                                <div class="form-group">
+                                    <label>Title</label>
+                                    <input type="text" name="title"
+                                           class="form-control  "
+                                           value=""/>
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label>Description (Optional)</label>
+                                    <input type="text" name="description"
+                                           class="form-control "
+                                           value=""
+                                           placeholder="Example: Suggested for Professionals."
+                                    />
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label>Subscribe Times</label>
+                                    <input type="text" name="usable_count"
+                                           class="form-control  "
+                                           value=""/>
+                                                                    </div>
+
+                                <div class="form-group">
+                                    <label>Days</label>
+                                    <input type="text" name="days"
+                                           class="form-control  "
+                                           value=""/>
+                                                                    </div>
+
+
+                                <div class="form-group">
+                                    <label>Price</label>
+                                    <input type="text" name="price"
+                                           class="form-control  "
+                                           value=""/>
+                                                                    </div>
+
+                                <div class="form-group mt-15">
+                                    <label class="input-label">Icon</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button type="button" class="input-group-text admin-file-manager" data-input="icon" data-preview="holder">
+                                                <i class="fa fa-chevron-up"></i>
+                                            </button>
+                                        </div>
+                                        <input type="text" name="icon" id="icon" value="" class="form-control "/>
+                                                                                <div class="input-group-append">
+                                            <button type="button" class="input-group-text admin-file-view" data-input="icon">
+                                                <i class="fa fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group custom-switches-stacked">
+                                    <label class="custom-switch pl-0">
+                                        <input type="hidden" name="is_popular" value="0">
+                                        <input type="checkbox" name="is_popular" id="isPopular" value="1"  class="custom-switch-input"/>
+                                        <span class="custom-switch-indicator"></span>
+                                        <label class="custom-switch-description mb-0 cursor-pointer" for="isPopular">Popular Badge</label>
+                                    </label>
+                                </div>
+
+                                <div class=" mt-4">
+                                    <button class="btn btn-primary">Save</button>
+                                </div>
+                            </form>
 
 
 

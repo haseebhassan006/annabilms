@@ -18,6 +18,7 @@ class SubscribesController extends Controller
             }
         ])->paginate(10);
 
+
         $data = [
             'pageTitle' => trans('admin/pages/financial.subscribes'),
             'subscribes' => $subscribes

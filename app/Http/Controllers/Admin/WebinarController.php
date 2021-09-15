@@ -277,7 +277,7 @@ class WebinarController extends Controller
         $this->authorize('admin_webinars_create');
 
         $this->validate($request, [
-            'type' => 'required|in:webinar,course,text_lesson',
+            'type' => 'required',
             'title' => 'required|max:255',
             'thumbnail' => 'required',
             'image_cover' => 'required',

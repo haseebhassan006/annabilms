@@ -103,18 +103,21 @@ class DashboardController extends Controller
         $buyerIds = Sale::whereNull('refund_at')
             ->pluck('buyer_id')
             ->toArray();
+
         $teacherIdsHasClass = Webinar::where('status', Webinar::$active)
             ->pluck('creator_id', 'teacher_id')
             ->toArray();
+
         $teacherIdsHasClass = array_merge(array_keys($teacherIdsHasClass), $teacherIdsHasClass);
 
 
         $usersWithoutPurchases = User::whereNotIn('id', array_unique($buyerIds))->count();
+
         $teachersWithoutClass = User::where('role_name', Role::$teacher)
             ->whereNotIn('id', array_unique($teacherIdsHasClass))
             ->count();
-        $featuredClasses = FeatureWebinar::where('status', 'publish')
-            ->count();
+        
+        $featuredClasses = FeatureWebinar::where('status', 'publish')->count();
 
         $now = time();
         $activeDiscounts = Ticket::where('start_date', '<', $now)
