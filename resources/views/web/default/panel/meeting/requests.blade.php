@@ -303,8 +303,7 @@
     <script src="/assets/default/vendors/select2/select2.min.js"></script>
 
     <script>
-        ;(function (){ 
-        'use strict'
+
         var instructor_contact_information_lang = '{{ trans('panel.instructor_contact_information') }}';
         var student_contact_information_lang = '{{ trans('panel.student_contact_information') }}';
         var email_lang = '{{ trans('public.email') }}';
@@ -320,7 +319,7 @@
         var finishReserveSuccessHint = '{{ trans('meeting.finish_reserve_modal_success_hint') }}';
         var finishReserveFail = '{{ trans('meeting.finish_reserve_modal_fail') }}';
         var finishReserveFailHint = '{{ trans('meeting.finish_reserve_modal_fail_hint') }}';
-        }())
+
     </script>
 
     <script src="/assets/default/vendors/daterangepicker/daterangepicker.min.js"></script>

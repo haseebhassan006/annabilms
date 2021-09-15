@@ -292,8 +292,7 @@
     <script src="/assets/default/js/panel/financial/account.min.js"></script>
 
     <script>
-        (function ($) {
-            "use strict";
+
             @if(session()->has('sweetalert'))
             Swal.fire({
                 icon: "{{ session()->get('sweetalert')['status'] ?? 'success' }}",
@@ -302,6 +301,6 @@
                 width: '25rem',
             });
             @endif
-        })(jQuery)
+  
     </script>
 @endpush

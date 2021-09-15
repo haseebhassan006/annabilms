@@ -205,10 +205,9 @@
     <script src="/assets/default/vendors/select2/select2.min.js"></script>
 
     <script>
-        ;(function (){
-        'use strict'
+
         var saveSuccessLang = '{{ trans('webinars.success_store') }}';
-        }())
+      
     </script>
 
     <script src="/assets/default/js/panel/marketing/special_offers.min.js"></script>

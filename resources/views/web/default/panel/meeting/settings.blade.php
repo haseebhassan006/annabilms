@@ -119,8 +119,7 @@
 @push('scripts_bottom')
     <script src="/assets/default/vendors/bootstrap-clockpicker/bootstrap-clockpicker.min.js"></script>
     <script type="text/javascript">
-        ;(function (){ 
-        'use strict'
+
         var saveLang = '{{ trans('public.save') }}';
         var closeLang = '{{ trans('public.close') }}';
         var successDeleteTime = '{{ trans('meeting.success_delete_time') }}';
@@ -132,7 +131,7 @@
         var requestFailed = '{{ trans('public.request_failed') }}';
         var saveMeetingSuccessLang = '{{ trans('meeting.save_meeting_setting_success') }}';
         var toTimepicker, fromTimepicker;
-        }())
+      
     </script>
     <script src="/assets/default/js/panel/meeting/meeting.min.js"></script>
 @endpush
