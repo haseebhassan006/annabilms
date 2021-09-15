@@ -218,82 +218,8 @@
     </section>
 
 </section>
-<section class="contact-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <h2>Consent Form for Kids to Appear in Educational Videos</h2>
-                @if(!empty(session()->has('msg')))
-                <div class="alert alert-success my-25 d-flex align-items-center">
-                    <i data-feather="check-square" width="50" height="50" class="mr-2"></i>
-                    {{ session()->get('msg') }}
-                </div>
-            @endif
-                <form action="/contact/store" method="post" class="mt-20">
-                    {{ csrf_field() }}
-                    <input type="name" name="name" value="{{ old('name') }}" class="form-control @error('name')  is-invalid @enderror name-1" placeholder="Name" >
-                    @error('name')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                    <input type="text" name="email" value="{{ old('email') }}" class="form-control @error('email')  is-invalid @enderror email-1" placeholder="Email">
-                    @error('email')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                    <input type="text" name="phone" value="{{ old('phone') }}" class="form-control @error('phone')  is-invalid @enderror name-1" placeholder="Phone">
-                    @error('phone')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                    <input type="text" name="subject" value="{{ old('subject') }}" class="form-control @error('subject')  is-invalid @enderror email-1" placeholder="Subject">
-                    @error('subject')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                    <textarea class="form-control @error('message')  is-invalid @enderror" rows="3" placeholder="Message" name="message">{{ old('message') }}</textarea>
-                    @error('message')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="newsletter-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Subscribe Our Newsletter</h2>
-                <p>Join us in developing educational communities that meets the unique needs of the WHOLE child!</p>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-3">
-                <h3>E-mail address</h3>
-                <input type="email" class="form-control email-2" placeholder="Loremipsum@gmail.com">
-            </div>
-            <div class="col-lg-3">
-                <h3>Password</h3>
-                <input type="email" class="form-control email-2" placeholder="*******">
-            </div>
-            <div class="col-lg-2">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-            <div class="col-lg-2"></div>
-        </div>
-    </div>
-</section>
 
 
 

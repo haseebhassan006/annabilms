@@ -7,15 +7,19 @@
 
 
 @section('content')
+<section class="cart-banner position-relative text-center">
+    <h1 class="font-30 text-white font-weight-bold">{{ $pageTitle }}</h1>
+    <span class="payment-hint font-20 text-white d-block"> {{ $coursesCount }} {{ trans('product.courses') }}</span>
+</section>
 
-<section class="banner">
+{{-- <section class="banner">
     <div class="container">
         <div class="row">
             <h1 class="text-white font-30 mb-15">{{ $pageTitle }}</h1>
             <span class="course-count-badge py-5 px-10 text-white rounded">{{ $coursesCount }} {{ trans('product.courses') }}</span>
         </div>
     </div>
-</section>
+</section> --}}
     <div class="container mt-30">
 
         @if(!empty($featureWebinars) and !$featureWebinars->isEmpty())
