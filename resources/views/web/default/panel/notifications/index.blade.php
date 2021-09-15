@@ -54,8 +54,7 @@
 
 @push('scripts_bottom')
     <script>
-        (function ($) {
-            "use strict";
+
             @if(!empty(request()->get('notification')))
             setTimeout(() => {
                 $('body #showNotificationMessage{{ request()->get('notification') }}').trigger('click');
@@ -64,7 +63,7 @@
                 window.history.pushState("object or string", "Title", url);
             }, 400);
             @endif
-        })(jQuery)
+       
     </script>
 
     <script src="/assets/default/js/panel/notifications.min.js"></script>
