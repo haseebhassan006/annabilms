@@ -6,13 +6,21 @@
 
 
 @section('content')
-  
+{{-- <section class="cart-banner position-relative text-center">
+    <h1 class="font-30 text-white font-weight-bold">{{ $pageTitle }}</h1>
+    <span class="payment-hint font-20 text-white d-block"> </span>
+</section> --}}
 
-<section class="banner">
-    <div class="container">
-        <div class="row">
-            <h1 class="text-white font-30 mb-15">{{ $pageTitle }}</h1>
-            <span class="course-count-badge py-5 px-10 text-white rounded">{{ $coursesCount }} {{ trans('product.courses') }}</span>
+<section class="site-top-banner search-top-banner opacity-04 position-relative" style="background-color: #000">
+
+
+    <div class="container h-100">
+        <div class="row contact-us-head h-100 justify-content-center text-center">
+            <div class="col-12 col-md-9 col-lg-7">
+                <div class="top-search-categories-form">
+                    <h1 class="text-white font-30 mb-15">{{ trans('site.contact_us') }}</h1>
+                </div>
+            </div>
         </div>
     </div>
 </section>
