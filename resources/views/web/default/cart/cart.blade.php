@@ -2,10 +2,13 @@
 
 
 @section('content')
+
+
     <section class="cart-banner position-relative text-center">
         <h1 class="font-30 text-white font-weight-bold">{{ trans('cart.shopping_cart') }}</h1>
         <span class="payment-hint font-20 text-white d-block"> {{'$' . $subTotal . ' ' . trans('cart.for_items',['count' => $carts->count()]) }}</span>
     </section>
+
 
     <div class="container">
         <section class="mt-45">

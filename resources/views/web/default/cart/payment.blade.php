@@ -5,10 +5,18 @@
 @endpush
 
 @section('content')
-    <section class="cart-banner position-relative text-center">
+   <section class="cart-banner position-relative text-center ">
         <h1 class="font-30 text-white font-weight-bold">{{ trans('cart.checkout') }}</h1>
         <span class="payment-hint font-20 text-white d-block">{{'$' . $total . ' ' .  trans('cart.for_items',['count' => $count]) }}</span>
     </section>
+    {{-- <section class="banner">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-white font-30 mb-15">{{ trans('cart.checkout') }}</h1>
+                <span class="payment-hint font-20 text-white d-block">{{'$' . $total . ' ' .  trans('cart.for_items',['count' => $count]) }}}</span>
+            </div>
+        </div>
+    </section> --}}
 
     <section class="container mt-45">
         <h2 class="section-title">{{ trans('financial.select_a_payment_gateway') }}</h2>
