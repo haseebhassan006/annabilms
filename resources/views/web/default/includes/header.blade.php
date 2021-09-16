@@ -1,7 +1,7 @@
     <!-- Floating Menu -->
     <div class="icon" id="menu">
         <!-- <i class="fas fa-bars" id="toggler"></i> -->
-        <img src=" {{ asset('/frontend/assets/images/Untitled-1.png') }} " alt=""  id="toggler">
+        {{-- <img src=" {{ asset('/frontend/assets/images/Untitled-1.png') }} " alt=""  id="toggler"> --}}
       </div>
       <div id="main">
         <nav id="navbar">
