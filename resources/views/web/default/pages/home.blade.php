@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <h2>Welcome to <br><strong> An-Nabi Institute</strong></h2>
-            <a href="#" class="join-btn">JOIN COURSES</a>
+            <a href="/classes" class="join-btn">JOIN COURSES</a>
         </div>
     </div>
 </section>

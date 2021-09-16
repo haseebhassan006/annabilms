@@ -9,7 +9,7 @@
  @section('content')
  <section class="cart-banner position-relative text-center">
     <h1 class="font-30 text-white font-weight-bold">{{ $pageTitle }}</h1>
-    <span class="payment-hint font-20 text-white d-block">{{ $instructorsCount }}{{ trans('product.courses') }}</span>
+    {{-- <span class="payment-hint font-20 text-white d-block">{{ $instructorsCount }}{{ trans('product.courses') }}</span> --}}
 </section>
  {{-- <section class="banner">
     <div class="container">
