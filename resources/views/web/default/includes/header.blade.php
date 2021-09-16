@@ -1,9 +1,9 @@
     <!-- Floating Menu -->
-    <div class="icon" id="menu">
+    {{-- <div class="icon" id="menu">
         <!-- <i class="fas fa-bars" id="toggler"></i> -->
         <img src=" {{ asset('/frontend/assets/images/Untitled-1.png') }} " alt=""  id="toggler">
-      </div>
-      <div id="main">
+    </div> --}}
+      {{-- <div id="main">
         <nav id="navbar">
           <ul id="links">
             <li class="list-inline-item nav-item"><a class="nav-link" href="/">Home</a></li>
@@ -27,7 +27,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </div> --}}
       <!-- Floating Menu -->
       <header>
         <div class="container">
