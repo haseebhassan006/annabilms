@@ -8,7 +8,10 @@
     @php
         $registerMethod = getGeneralSettings('register_method') ?? 'mobile';
     @endphp
-
+<section class="cart-banner position-relative text-center">
+    <h1 class="font-30 text-white font-weight-bold"></h1>
+    <span class="payment-hint font-20 text-white d-block"> </span>
+</section>
     <div class="container">
         <div class="row login-container">
             <div class="col-12 col-md-6 pl-0">

@@ -1,6 +1,11 @@
 @extends(getTemplate().'.layouts.app')
 
 @section('content')
+
+<section class="cart-banner position-relative text-center">
+    <h1 class="font-30 text-white font-weight-bold"></h1>
+    <span class="payment-hint font-20 text-white d-block"> </span>
+</section>
     <div class="container">
         @if(!empty(session()->has('msg')))
             <div class="alert alert-info alert-dismissible fade show mt-30" role="alert">
